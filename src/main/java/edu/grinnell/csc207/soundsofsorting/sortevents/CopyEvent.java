@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * A <code>CopyEvent</code> logs a copy of a value into an index of the array.
  */
-public class CopyEvent<T> implements SortEvent<T>{
+public class CopyEvent<T> implements SortEvent<T> {
 private int dest; 
 private int src;
 
