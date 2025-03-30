@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * A <code>SwapEvent</code> logs a swap between two indices of the array.
  */
-public class SwapEvent<T> {
+public class SwapEvent<T> implements SortEvent<T> {
     private int id1; // first index
     private int id2; // second index
 

@@ -8,7 +8,7 @@ import java.util.List;
  * A <code>CompareEvent</code> logs a comparison a sort makes between two
  * indices in the array.
  */
-public class CompareEvent<T> {
+public class CompareEvent<T> implements SortEvent<T> {
     private int id1;
     private int id2;
 
