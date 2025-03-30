@@ -9,26 +9,27 @@ import java.util.List;
  * indices in the array.
  */
 public class CompareEvent<T> {
-    private int i;
-    private int j;
-    public CompareEvent(int i, int j) {
-        this.i = i;
-        this.j = j;
+    private int id1;
+    private int id2;
+
+    public CompareEvent(int id1, int id2) {
+        this.id1 = id1;
+        this.id2 = id2;
     }
 
     public void apply(T[] arr) {
-        
+
     }
 
     public List<Integer> getAffectedIndices() {
         List<Integer> index = new ArrayList<>();
-        index.add(i);
-        index.add(j);
+        index.add(id1);
+        index.add(id2);
         return index;
     }
 
     public boolean isEmphasized() {
         return false;
     }
-    
+
 }
