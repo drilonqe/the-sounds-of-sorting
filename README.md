@@ -9,8 +9,8 @@ Author: Drilon Qerimi
 * I used the pages made by prof. Osera as reference
 source: https://osera.cs.grinnell.edu/ttap/data-structures-labs/ 
 source: https://osera.cs.grinnell.edu/ttap/data-structures
-* https://docs.oracle.com/en/java/javase/23/docs/api/index.html
-* Forked repository from prof.Osera
+* https://docs.oracle.com/en/java/javase/23/docs/api/index.html referenced Graphics and Color.
+* Forked repository from prof.Osera: https://github.com/psosera/the-sounds-of-sorting.git.
 * For merge sort I based my code of of this:
 https://www.geeksforgeeks.org/java-program-for-merge-sort/
 * For quick sort I based my code of of this:
@@ -18,8 +18,10 @@ https://www.geeksforgeeks.org/java-program-for-quicksort/
 * I found gnome sort in this wikipedia page:
 https://en.wikipedia.org/wiki/Sorting_algorithm
 * I implemented gnome sort based on this:
-https://dickgrune.com/Programs/gnomesort.html
+https://dickgrune.com/Programs/gnomesort.html -Dick Grune,
 * Classmate Fui helped me in the file arrayPanel.java to figure out bar height and how to
 set color to different, as well as for the use of fillRect.
 * Classmate Fui advised me to clone notes and get string from sorts for ControlPanel.java
 * For Sorts.java, I worked with classmate Nahom through merge sort in the lab before for this class.
+* Used source: https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Component.html for
+getHeight() and getWidth().
