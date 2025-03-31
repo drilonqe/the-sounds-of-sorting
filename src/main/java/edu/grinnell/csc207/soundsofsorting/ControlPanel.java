@@ -137,9 +137,11 @@ public class ControlPanel extends JPanel {
                 
                 // TODO: fill me in!
                 // 1. Create the sorting events list
-                // 2. Add in the compare events to the end of the list
-                List<SortEvent<Integer>> events = new java.util.LinkedList<>();
-                
+                // 2. Add in the compare events to the end of the list  
+                /* citation: Classmate Fui's advice */
+                Integer[] notesClone = notes.getNotes().clone();
+                List<SortEvent<Integer>> events = generateEvents((String) sorts.getSelectedItem(), notesClone);
+
                 // NOTE: The Timer class repetitively invokes a method at a
                 //       fixed interval.  Here we are specifying that method
                 //       by creating an _anonymous subclass_ of the TimeTask
@@ -154,10 +156,21 @@ public class ControlPanel extends JPanel {
                         if (index < events.size()) {
                             SortEvent<Integer> e = events.get(index++);
                             // TODO: fill me in!
-                            // 1. Apply the next sort event.
+                            // 1. Apply the next sort event
                             // 3. Play the corresponding notes denoted by the
                             //    affected indices logged in the event.
                             // 4. Highlight those affected indices.
+                            notes.clearAllHighlighted(); // check once more
+                            e.apply(notes.getNotes());                           
+                            List<Integer> affectedIndices = e.getAffectedIndices();
+                            for(int i = 0; i < affectedIndices.size(); i++) {
+                                int affectedIdx = affectedIndices.get(i);
+                                scale.playNote(affectedIdx, e.isEmphasized());
+                                notes.highlightNote(affectedIdx);
+                            }
+
+
+
                             panel.repaint();
                         } else {
                             this.cancel();
