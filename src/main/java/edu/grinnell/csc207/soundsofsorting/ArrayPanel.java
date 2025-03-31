@@ -24,7 +24,9 @@ public class ArrayPanel extends JPanel {
     }
 
     /*
-     * https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Component.html
+     * Render each element of the indices array, and makes colored bars based on height of bar
+     * @param g 
+     * citation : https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Component.html
      */
     @Override
     public void paintComponent(Graphics g) {
@@ -34,8 +36,10 @@ public class ArrayPanel extends JPanel {
         int barWidth = width / indices.length;
         for (int i = 0; i < indices.length; i++){
             int barHeight = (int)(1.0 * indices[i] / indices.length * height);
+            /* my formula for gradient. I tried a couple of values but this one looked
+            the best. */
             int blue = (255 * indices[i]) / indices.length;  // Taller bars are more blue
-            int green = (int) (255 - (blue * 0.5));                  // Taller bars are less green
+            int green = (int) (255 - (blue * 0.5));          // Taller bars are less green
             
             g.setColor(new Color(0, green, blue));
             g.fillRect(i * barWidth, height - barHeight, barWidth, barHeight);

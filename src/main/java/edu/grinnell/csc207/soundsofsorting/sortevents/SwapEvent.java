@@ -18,7 +18,7 @@ public class SwapEvent<T> implements SortEvent<T> {
     public void apply(T[] arr) {
         T tmp = arr[id1];
         arr[id1] = arr[id2];
-        arr[id1] = tmp;
+        arr[id2] = tmp;
     }
 
     public List<Integer> getAffectedIndices() {

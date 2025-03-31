@@ -160,7 +160,7 @@ public class ControlPanel extends JPanel {
                             // 3. Play the corresponding notes denoted by the
                             //    affected indices logged in the event.
                             // 4. Highlight those affected indices.
-                            notes.clearAllHighlighted(); // check once more
+                            notes.clearAllHighlighted(); // clear older highlighted
                             e.apply(notes.getNotes());                           
                             List<Integer> affectedIndices = e.getAffectedIndices();
                             for(int i = 0; i < affectedIndices.size(); i++) {
