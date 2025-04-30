@@ -8,15 +8,15 @@ import java.util.List;
  */
 public class CopyEvent<T> implements SortEvent<T> {
 private int dest; 
-private int src;
+private T value;
 
-public CopyEvent(int dest, int src) {
+public CopyEvent(int dest, T value) {
     this.dest = dest;
-    this.src = src;
+    this.value = value;
    
 }
  public void apply(T[] arr) {
-    arr[dest] = arr[src]; // copy value at the index of destination
+    arr[dest] = value; // copy value at the index of destination
     }
 
     public List<Integer> getAffectedIndices() {

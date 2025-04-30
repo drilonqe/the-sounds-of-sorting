@@ -9,7 +9,7 @@ import java.util.Random;
  * in the program.
  */
 public class NoteIndices {
-    private int[] indices; // array of indices
+    private Integer[] indices; // array of indices
     private boolean[] hl; // tracks highlighted indices
 
     /**
@@ -27,7 +27,7 @@ public class NoteIndices {
      * @param n the size of the scale object that these indices map into
      */
     public void initializeAndShuffle(int n) {
-        indices = new int[n];
+        indices = new Integer[n];
         for (int i = 0; i < n; i++) {
             indices[i] = i;
         }
@@ -37,7 +37,7 @@ public class NoteIndices {
         for (int i = n - 1; i > 0; i--) {
             int j = r.nextInt(i + 1); // Random index between 0 and i
             // Swap indices[i] and indices[j]
-            int temp = indices[i];
+            Integer temp = indices[i];
             indices[i] = indices[j];
             indices[j] = temp;
         }
@@ -47,12 +47,7 @@ public class NoteIndices {
 
     /** @return the indices of this NoteIndices object */
     public Integer[] getNotes() {
-        // Convert int[] to Integer[]
-        Integer[] itgIndices = new Integer[indices.length];
-        for (int i = 0; i < indices.length; i++) {
-            itgIndices[i] = indices[i];
-        }
-        return itgIndices;
+        return indices;
     }
 
     /**

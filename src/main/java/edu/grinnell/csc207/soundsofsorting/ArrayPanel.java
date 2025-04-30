@@ -38,10 +38,14 @@ public class ArrayPanel extends JPanel {
             int barHeight = (int)(1.0 * indices[i] / indices.length * height);
             /* my formula for gradient. I tried a couple of values but this one looked
             the best. */
+            if (notes.isHighlighted(i)) {
+                g.setColor(new Color(255, 0, 0));;  // highlight bar in red
+            } else {
             int blue = (255 * indices[i]) / indices.length;  // Taller bars are more blue
             int green = (int) (255 - (blue * 0.5));          // Taller bars are less green
             
             g.setColor(new Color(0, green, blue));
+            }
             g.fillRect(i * barWidth, height - barHeight, barWidth, barHeight);
         }
 
