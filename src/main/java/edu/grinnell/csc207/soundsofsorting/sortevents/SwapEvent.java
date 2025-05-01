@@ -34,6 +34,8 @@ public class SwapEvent<T> implements SortEvent<T> {
 
     /**
      * Returns the list of indices affected by this event.
+     * 
+     * @return list of two indices that are being swapped
      */
     public List<Integer> getAffectedIndices() {
         List<Integer> index = new ArrayList<>();
@@ -45,6 +47,8 @@ public class SwapEvent<T> implements SortEvent<T> {
     /**
      * SwapEvents should be emphasized in the animation
      * so always return true.
+     * 
+     * @return true always because swaps are emphasized.
      */
     public boolean isEmphasized() {
         return true;
