@@ -23,15 +23,14 @@ public class ControlPanel extends JPanel {
 
     /** The MIDI note values for the B minor pentatonic scale */
     public static final int[] bMinorPentatonicValues = new int[] {
-            46, 49, 51, 53, 56, 58, 61, 63, 65, 68, 70, 73, 75, 78, 82, 85, 87
+        46, 49, 51, 53, 56, 58, 61, 63, 65, 68, 70, 73, 75, 78, 82, 85, 87
     };
-
     /** The MIDI note values for the chromatic scale */
     public static final int[] chromaticValues = new int[] {
-            40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
-            50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
-            60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
-            70, 71, 72, 73, 74, 75, 76, 77, 78, 79
+        40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+        50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+        60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+        70, 71, 72, 73, 74, 75, 76, 77, 78, 79
     };
 
     /**
@@ -103,19 +102,19 @@ public class ControlPanel extends JPanel {
 
         ///// The sort selection combo box /////
         JComboBox<String> sorts = new JComboBox<>(new String[] {
-                "Selection",
-                "Insertion",
-                "Bubble",
-                "Merge",
-                "Quick",
-                "Gnome"
+            "Selection",
+            "Insertion",
+            "Bubble",
+            "Merge",
+            "Quick",
+            "Gnome"
         });
         add(sorts);
 
         ///// The scale selection combo box /////
         JComboBox<String> scales = new JComboBox<>(new String[] {
-                "Pentatonic",
-                "Chromatic"
+            "Pentatonic",
+            "Chromatic"
         });
         add(scales);
 
@@ -148,7 +147,8 @@ public class ControlPanel extends JPanel {
                 // 2. Add in the compare events to the end of the list
                 /* citation: Classmate Fui's advice */
                 Integer[] notesClone = notes.getNotes().clone();
-                List<SortEvent<Integer>> events = generateEvents((String) sorts.getSelectedItem(), notesClone);
+                List<SortEvent<Integer>> events = generateEvents(
+                    (String) sorts.getSelectedItem(), notesClone);
 
                 // NOTE: The Timer class repetitively invokes a method at a
                 // fixed interval. Here we are specifying that method
