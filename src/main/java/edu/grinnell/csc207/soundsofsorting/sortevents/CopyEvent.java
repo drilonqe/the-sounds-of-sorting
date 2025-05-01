@@ -24,6 +24,8 @@ public class CopyEvent<T> implements SortEvent<T> {
 
     /**
      * Applies the copy event to the given array.
+     * 
+     * @param arr generic array
      */
     public void apply(T[] arr) {
         arr[dest] = value; // copy value at the index of destination
@@ -31,6 +33,8 @@ public class CopyEvent<T> implements SortEvent<T> {
 
     /**
      * Returns the indeices affected by this event.
+     * 
+     * @return a list of indices affected by CopyEvent
      */
     public List<Integer> getAffectedIndices() {
         List<Integer> index = new ArrayList<>();
@@ -40,6 +44,8 @@ public class CopyEvent<T> implements SortEvent<T> {
 
     /**
      * shows if is emphasized.
+     * 
+     * @return true since copy is always emphasized
      */
     public boolean isEmphasized() {
         return true;
