@@ -3,7 +3,7 @@
 Author: Drilon Qerimi
 
 ## CHANGELOG
-Grader comments:
+### Grader comments:
 
 You are on the right track! Your project does seem to run the sorting algorithms. However the animation is not present. In addition, when shuffling the bars through the Make Scale button, the images seem to stack instead of generate a new one each time.
 
@@ -11,7 +11,7 @@ For an E make sure you cover the requirements on the grading rubric above as wel
 - Run mvn checkstyle:check to get a list of all style violations. Aim for less than 3 for an E.
 - Highlight the bar that is currently being swapped throughout the sorting algorithm.
 
-CHANGES MADE
+### CHANGES MADE
 * Fixed images being stacked instead of generating new one each time.
 * Fixed shuffling the bars with animation and highlighting the right bar
 * Fixed all the style issues occuring in the first submission.
