@@ -30,8 +30,7 @@ public class CopyEvent<T> implements SortEvent<T> {
     }
 
     /**
-     * Returns the index affected by this event.
-     * Used to highlight bar
+     * Returns the indeices affected by this event.
      */
     public List<Integer> getAffectedIndices() {
         List<Integer> index = new ArrayList<>();

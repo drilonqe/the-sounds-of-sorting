@@ -1,4 +1,5 @@
 package edu.grinnell.csc207.soundsofsorting.sortevents;
+
 import java.util.List;
 
 /**
@@ -8,6 +9,7 @@ import java.util.List;
 public interface SortEvent<T> {
     /**
      * Applies this event to the array.
+     * 
      * @param arr the array to modify
      */
     public void apply(T[] arr);
