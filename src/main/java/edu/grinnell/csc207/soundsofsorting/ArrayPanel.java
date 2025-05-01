@@ -1,8 +1,9 @@
 package edu.grinnell.csc207.soundsofsorting;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Color;
+
 import javax.swing.JPanel;
 
 /**
@@ -37,6 +38,7 @@ public class ArrayPanel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
         Integer[] indices = notes.getNotes();
         int width = getWidth(); // screen width
         int height = getHeight(); // screen height

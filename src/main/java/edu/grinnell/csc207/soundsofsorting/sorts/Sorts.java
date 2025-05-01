@@ -129,8 +129,19 @@ public class Sorts {
 
     }
 
-    /*
-     * Code adapted from https://www.geeksforgeeks.org/java-program-for-merge-sort/
+    /**
+     * Sorts the array within the given indeces by splitting it in half
+     * and recursively sorting them
+     * 
+     * @param <T>     type of elements in arr
+     * @param arr     array being sorted
+     * @param scratch scratch array
+     * @param left    starting index of sort
+     * @param right   the end index of sort
+     * @param event   record all event
+     * 
+     *                Code adapted from
+     *                https://www.geeksforgeeks.org/java-program-for-merge-sort/
      */
     public static <T extends Comparable<? super T>> void mergeSort(
             T[] arr, T[] scratch, int left, int right, List<SortEvent<T>> event) {
@@ -151,9 +162,8 @@ public class Sorts {
     /*
      * Code adapted from https://www.geeksforgeeks.org/java-program-for-merge-sort/
      */
-    private static <T extends Comparable<? super T>> void mergeHelper(T[] arr, T[] scratch, int left, int mid,
-            int right,
-            List<SortEvent<T>> event) {
+    private static <T extends Comparable<? super T>> void mergeHelper(T[] arr, T[] scratch,
+            int left, int mid, int right, List<SortEvent<T>> event) {
 
         // Copy arr into scratch
         for (int i = left; i <= right; i++) {
@@ -210,6 +220,16 @@ public class Sorts {
 
     /*
      * Code adapted from https://www.geeksforgeeks.org/java-program-for-quicksort/
+     */
+    /**
+     * Quicksort partitions the array around a pivot, then sorts those halfs
+     * recursively.
+     * 
+     * @param <T>   type of element in array
+     * @param arr   the array to sort
+     * @param low   starting index
+     * @param high  ending index
+     * @param event events recorded
      */
     public static <T extends Comparable<? super T>> void quickSort(
             T[] arr, int low, int high, List<SortEvent<Integer>> event) {

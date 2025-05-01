@@ -71,6 +71,6 @@ public class NoteIndices {
 
     /** Clears all highlighted indices from this collection */
     public void clearAllHighlighted() {
-         Arrays.fill(hl, false); // replace all highlighted with false
+        Arrays.fill(hl, false); // replace all highlighted with false
     }
 }
