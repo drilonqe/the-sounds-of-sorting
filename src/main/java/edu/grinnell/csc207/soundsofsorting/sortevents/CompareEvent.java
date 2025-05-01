@@ -1,7 +1,6 @@
 package edu.grinnell.csc207.soundsofsorting.sortevents;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -26,6 +25,8 @@ public class CompareEvent<T> implements SortEvent<T> {
     /**
      * Comparing does not do anything to the array
      * so no apply is needed
+     * 
+     * @param arr generic array
      */
     public void apply(T[] arr) {
 
@@ -33,6 +34,8 @@ public class CompareEvent<T> implements SortEvent<T> {
 
     /**
      * Returns a list of two indices that are being compared.
+     * 
+     * @return list of two indices that are being compared
      */
     public List<Integer> getAffectedIndices() {
         List<Integer> index = new ArrayList<>();
@@ -43,6 +46,8 @@ public class CompareEvent<T> implements SortEvent<T> {
 
     /**
      * Not emphasized so no need to be hihglighted.
+     * 
+     * @return false becuase this event does not need to be emphasized
      */
     public boolean isEmphasized() {
         return false;
