@@ -123,7 +123,7 @@ public class Sorts {
             T[] arr) {
         List<SortEvent<T>> event = new ArrayList<>();
         // Create a scratch array of the same size
-        T[] scratch = arr.clone(); 
+        T[] scratch = arr.clone();
         mergeSort(arr, scratch, 0, arr.length - 1, event);
         return event;
 
@@ -135,7 +135,7 @@ public class Sorts {
     public static <T extends Comparable<? super T>> void mergeSort(
             T[] arr, T[] scratch, int left, int right, List<SortEvent<T>> event) {
         if (left < right) {
-            // Find midpoint of  array
+            // Find midpoint of array
             int mid = left + (right - left) / 2; // similar to what we did in binary search
 
             // sort the two halves
@@ -165,7 +165,7 @@ public class Sorts {
         int k = left; // pointer for merge back into arr
         while (i <= mid && j <= right) {
             event.add(new CompareEvent<>(i, j));
-            
+
             if (scratch[i].compareTo(scratch[j]) <= 0) {
                 arr[k] = scratch[i];
                 event.add(new CopyEvent<>(k, scratch[i]));
